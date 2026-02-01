@@ -1,0 +1,286 @@
+/* =====================================================
+   GLOBAL STYLES
+   Elegant tech / corporate theme
+===================================================== */
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #f4f7fb;              /* Soft light background */
+  color: #0a2540;                   /* Navy text */
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* =====================================================
+   NAVIGATION BAR
+===================================================== */
+
+nav {
+  background: #0a2540;              /* Navy Blue */
+  padding: 16px;
+  text-align: center;
+}
+
+/* Navigation links */
+nav a {
+  color: #ffffff;
+  margin: 0 14px;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+/* Underline animation */
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0%;
+  height: 3px;
+  background: #4da3ff;             /* Light Blue */
+  transition: width 0.3s ease;
+}
+
+/* Hover effect */
+nav a:hover::after {
+  width: 100%;
+}
+
+nav a:hover {
+  color: #4da3ff;
+}
+
+/* =====================================================
+   MAIN CONTENT CONTAINER
+===================================================== */
+
+.container {
+  background: #ffffff;
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 30px;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(10, 37, 64, 0.1);
+}
+
+/* DOG IMAGES */
+.image-row {
+  display: flex;
+  gap: 16px;  /* space between images */
+  justify-content: center;
+  align-items: center;
+  margin-bottom:24px;
+}
+
+.image-row img {
+  width: 300px;           /* same width */
+  height: 200px;          /* same height */
+  object-fit: cover;      /* prevents stretching */
+  border-radius: 8px;     /* optional: rounded corners */
+}
+
+/* =====================================================
+   HEADINGS
+===================================================== */
+
+h1, h2 {
+  color: #0a2540;
+  margin-bottom: 10px;
+}
+
+p {
+  line-height: 1.7;
+}
+
+/* =====================================================
+   IMAGES
+===================================================== */
+
+img {
+  max-width: 100%;
+  border-radius: 14px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Elegant hover effect */
+img:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 25px rgba(77, 163, 255, 0.6);
+}
+
+/* =====================================================
+   BUTTONS
+===================================================== */
+
+button {
+  width: 100%;
+  padding: 13px;
+  margin-top: 12px;
+  border-radius: 8px;
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+
+  background: #4da3ff;             /* Light Blue */
+  color: #ffffff;
+
+  transition: all 0.25s ease;
+}
+
+/* Hover */
+button:hover {
+  background: #2b8cff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(77, 163, 255, 0.5);
+}
+
+/* Click animation */
+button:active {
+  transform: scale(0.96);
+}
+
+/* =====================================================
+   INPUTS & TEXTAREA
+===================================================== */
+
+input,
+textarea,
+select {
+  width: 100%;
+  padding: 11px;
+  margin-top: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccd6e0;
+  font-size: 15px;
+  transition: border 0.3s ease;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: #4da3ff;
+}
+
+/* =====================================================
+   TABLE (DOG vs CAT)
+===================================================== */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 25px;
+}
+
+th {
+  background: #0a2540;             /* Navy */
+  color: #ffffff;
+}
+
+th, td {
+  padding: 14px;
+  border: 1px solid #dde4ec;
+  text-align: center;
+}
+
+tr:nth-child(even) {
+  background: #f4f7fb;
+}
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.footer {
+  background: #0a2540;
+  color: #ffffff;
+  margin-top: 50px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  max-width: 1100px;
+  margin: auto;
+  padding: 35px 20px;
+  flex-wrap: wrap;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 220px;
+}
+
+.footer-section h3 {
+  color: #4da3ff;
+  margin-bottom: 12px;
+}
+
+.footer-section p {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 14px;
+  background: #071a2e;
+  font-size: 14px;
+}
+
+/* =====================================================
+   DARK MODE (Corporate Dark)
+===================================================== */
+
+body.dark {
+  background: #0b1c2d;
+  color: #e6edf3;
+}
+
+body.dark .container {
+  background: #102a43;
+  box-shadow: none;
+}
+
+body.dark nav {
+  background: #071a2e;
+}
+
+body.dark table th {
+  background: #071a2e;
+}
+
+body.dark .footer {
+  background: #071a2e;
+}
+
+body.dark .footer-bottom {
+  background: #051423;
+}
+
+/* =====================================================
+   MOBILE RESPONSIVE DESIGN
+===================================================== */
+
+@media (max-width: 768px) {
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .container {
+    margin: 20px;
+    padding: 22px;
+  }
+
+  table, th, td {
+    font-size: 14px;
+  }
+}
